@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types'
 
 const Section = ({title, children}) => {
-    return <>{title}
+    return <>
+    <h1>{title}</h1>
    {children}
     </>
 }

@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types'
 
-const Notification = ({messege}) => {
+const Notification = ({message}) => {
 return (
-    <>{messege}</>
+    <><p>{message}</p></>
 )
 };
 
 Notification.propTypes ={
-    messege: PropTypes.string
+    message: PropTypes.string
 }
 
 export default Notification;
