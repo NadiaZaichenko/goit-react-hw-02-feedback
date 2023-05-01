@@ -1,5 +1,6 @@
 import {Component} from 'react'
-import css from 'components/Feedback/App.module.css'
+// import css from 'components/Feedback/App.module.css'
+import { StyledContainer, SectionContainer } from './App.styled'
 import { FeedbackOptions } from './Feedback/FeedbackOptions'
 import { Statistics } from './Feedback/Statistics'
 import Section from './Feedback/Section'
@@ -35,8 +36,9 @@ export class App extends Component {
 
       render() {
         return (
-            <div className={css.container}>
-              <Section title='Please leave feedback'>
+            <StyledContainer>
+              <SectionContainer>
+                <Section title='Please leave feedback'>
                  <FeedbackOptions 
                 options = {Object.keys(this.state)} 
                 onLeaveFeedBack = {this.LeaveFeedBack}/>
@@ -54,8 +56,9 @@ export class App extends Component {
                  ) : (
                   <Notification message="There is no feedback" />
                  )} 
-                  </Section>        
-            </div>
+                  </Section>  
+              </SectionContainer>      
+            </StyledContainer>
         )
       }
 }
